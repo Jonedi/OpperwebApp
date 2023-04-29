@@ -1,9 +1,52 @@
 @import "variables";
+@import "override";
 @import "bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&family=Roboto:ital,wght@0,400;0,900;1,400&display=swap');
+
+body { color: #fff; }
 
 .title {
     font-family: $roboto;
     font-weight: 900;
     color: $fuxia;
+}
+
+.container-full {
+    @include media-breakpoint-up(xxl) {
+        max-width: 1400px;
+        margin: auto;
+    }
+}
+
+.container-pf {
+    @include media-breakpoint-up(xxl) {
+        max-width: 1400px;
+    }
+}
+
+.min__height {
+    @include media-breakpoint-up(xl) {
+        min-height: 40em;
+        height: 100%;
+    }
+}
+
+// Login y Signup
+.slides {
+    .carousel__pagination-button::after {
+        background-color: rgba(#fff, 0.3);
+    }
+    .carousel__pagination-button:hover::after, .carousel__pagination-button--active::after {
+        background-color: #fff;
+    }
+}
+
+.bg-gradiant-sm-login {
+    @include media-breakpoint-down(md) {
+        background: $fuxia;
+        background: linear-gradient(180deg, rgba($fuxia,1) 0%, rgba(30,30,30,1) 70%);
+    }
 }

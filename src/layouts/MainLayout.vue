@@ -1,27 +1,21 @@
+<script setup>
+
+</script>
+
 <template>
-  <div class="pt-3 ps-3">
-    <div class="head d-flex justify-content-around me-4">
-      <img src="/imgs/logo.png" class="img-fluid logo_w" alt="logo">
-      <h2 class="title"><span class="text-white">anime</span>yabu.</h2>
+  <div class="pt-3 ps-3 pb-5">
+    <div class="menu mt-5 pt-5 ms-0 ms-md-4">
+      <h4 class="text-white ">Categorías</h4>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link text-white active" aria-current="page" href="#">Ver todos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Crear</a>
+        </li>
+      </ul>
+      <h4 class="text-white mt-3">Cerrar sesión</h4>
     </div>
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link text-white active" aria-current="page" href="#">Active</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white disabled">Disabled</a>
-      </li>
-    </ul>
   </div>
 </template>
-
-<style scoped lang="scss">
-.logo_w { width: 46px; }
-</style>
 

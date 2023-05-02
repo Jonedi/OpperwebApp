@@ -33,7 +33,7 @@ onMounted(() => {
 
 const handleSubmit = (e) => {
     e.preventDefault()
-    userStore.signupUserNat(name.value, lastname.value, phone.value, email.value, identity.value, password.value, type.value)
+    userStore.signupUserNat(name.value, lastname.value, phone.value, identity.value, email.value, password.value, type.value)
 };
 </script>
 

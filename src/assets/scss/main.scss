@@ -34,6 +34,22 @@ body { color: #fff; }
     }
 }
 
+.menu {
+    .nav-item {
+        padding-left: 1em;
+        &::before {
+            content: "";
+            display: block;
+            border-radius: 50px;
+            background: #fff;
+            width: 5px;
+            height: 5px;
+            position: relative;
+            right: 1em;
+        }
+    }
+}
+
 // Login y Signup
 .slides {
     .carousel__pagination-button::after {

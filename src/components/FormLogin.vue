@@ -3,8 +3,8 @@ import { onMounted, ref } from "vue";
 import { useUserStore } from "../stores/user";
 
 const userStore = useUserStore();
-const email = ref('test@test.com')
-const password = ref('12345678')
+const email = ref('jonedi@gmail.com')
+const password = ref('5555')
 
 onMounted(() => {
   'use strict'

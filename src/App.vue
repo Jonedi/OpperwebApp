@@ -1,7 +1,10 @@
 <script setup>
 import MainLayout from './layouts/MainLayout.vue';
+import { useUserStore } from "./stores/user";
 
-const userStore = false;
+const userStore = useUserStore();
+
+console.log(userStore.userData);
 </script>
 
 <template>
@@ -20,10 +23,10 @@ const userStore = false;
     </div>
     <!-- content -->
     <div class="row min-h">
-      <div class="col-12 col-sm-3 bg-purple pt-4" :class="userStore ? 'd-none d-sm-block col-12' : 'd-none'">
+      <div class="col-12 col-sm-3 bg-purple pt-4" :class="userStore.userData ? 'd-none d-sm-block col-12' : 'd-none'">
         <MainLayout />
       </div>
-      <div :class="userStore ? 'col-12 col-sm-9 ' : 'col-12'" class="bg-black">
+      <div :class="userStore.userData ? 'col-12 col-sm-9 ' : 'col-12'" class="bg-black">
         <router-view />
       </div>
     </div>

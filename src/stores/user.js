@@ -1,6 +1,5 @@
 import { defineStore } from "pinia";
 import router from "../router/router";
-import { login } from "../modulo/data";
 import json from '../modulo/signup.json' assert { type: 'JSON' }
 
 export const useUserStore = defineStore("userStore", {
@@ -78,10 +77,9 @@ export const useUserStore = defineStore("userStore", {
                 const emailN = json.map(e => e.Email).toString()
                 const token = this.tokenUser()
                 this.userData = {name, email: emailN, token}
-                console.log(this.userData);
+
                 loginData === true ? this.currentUser() : null
 
-                router.push("/");
             } catch (e) {
                 console.log(e);
             } finally {
@@ -92,12 +90,15 @@ export const useUserStore = defineStore("userStore", {
         currentUser() {
             return new Promise((resolve, reject) => {
                 localStorage.setItem('user', JSON.stringify(this.userData))
+
+                router.push("/");
                 resolve(this.userData)
             }, e => reject(e))
         },
         logoutUser() {
             this.userData = null
             localStorage.removeItem('user')
+            location.reload()
             router.push('/login')
             console.log(this.userData);
         }

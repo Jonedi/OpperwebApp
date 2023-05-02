@@ -1,7 +1,9 @@
-# Vue 3 + Vite
+# Aplicación construida con Vue 3 + Pinia + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Esta aplicación fue construida con la últimas versiones de Vue como framework FrontEnd, Pinia la versión 5 Vuex para el manejo de estados y Vite como administrador de dependencias. Se construyó esta app como una prueba técnica para la empresa OpperWeb.
 
-## Recommended IDE Setup
+Nota. Al hacer el registro de un nuevo usuario, el documento json que se crea en este proceso se debe guardar en la carpeta `/src/modulos`, para que se logre iniciar sesión del usuario.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Para más información
+
+Para conocer más sobre el autor, ver el sitio web[Website Jon Tmarz](https://https://jontmarz.netlify.app/).

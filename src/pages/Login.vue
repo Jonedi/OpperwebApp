@@ -8,7 +8,7 @@ import Slides from "../components/Slides.vue";
         <div class="col-12 col-md-6">
             <FormLogin />
         </div>
-        <div class="col-12 col-md-6 d-none d-md-flex align-self-stretch">
+        <div class="col-12 col-md-6 d-none d-md-flex align-self-stretch bg-purple">
             <Slides />
         </div>
     </div>

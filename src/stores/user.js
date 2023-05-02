@@ -72,14 +72,18 @@ export const useUserStore = defineStore("userStore", {
             this.loadingUser = true
             try {
                 const loginData = json.some(e => e.Email === email && e.Contraseña === password)
-
-                const name = json.map(e => e.Nombre).toString()
-                const emailN = json.map(e => e.Email).toString()
-                const token = this.tokenUser()
-                this.userData = {name, email: emailN, token}
-
-                loginData === true ? this.currentUser() : null
-
+                if (loginData === true) {
+                    const name = json.map(e => e.Nombre).toString()
+                    const token = this.tokenUser()
+                    localStorage.setItem('user', JSON.stringify({name, email, token}))
+                    
+                    this.currentUser()
+                    router.push("/");
+                } else {
+                    console.log("pasó por aquí. Usuario inválido");
+                    this.$swal('Usuario o Contraseña inválidas. Pruebe de nuevo', 'error');
+                }
+                
             } catch (e) {
                 console.log(e);
             } finally {
@@ -89,9 +93,8 @@ export const useUserStore = defineStore("userStore", {
 
         currentUser() {
             return new Promise((resolve, reject) => {
-                localStorage.setItem('user', JSON.stringify(this.userData))
-
-                router.push("/");
+                this.userData = JSON.parse(localStorage.getItem('user'))
+                
                 resolve(this.userData)
             }, e => reject(e))
         },

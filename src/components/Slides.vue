@@ -14,7 +14,7 @@ const slides = [
 </script>
 
 <template>
-    <section class="bg-purple w-100">
+    <section class="w-100">
         <!-- Slides -->
         <Carousel :autoplay="2000" :wrap-around="true" class="slides mb-5">
             <Slide v-for="slide in slides" :key="slide">

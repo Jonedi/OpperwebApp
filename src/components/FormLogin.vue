@@ -55,12 +55,12 @@ const social = [
                     <div class="mb-3">
                         <label for="validationCustom01" class="form-label">Email</label>
                         <input type="email" class="form-control bg-input text-white" v-model.trim="email" id="validationCustom01" aria-describedby="emailHelp" required>
-                        <div id="invalid-feedback" class="form-text text-end d-none">Email inválido</div>
+                        <div class="invalid-feedback form-text text-end">Formato Email inválido</div>
                     </div>
                     <div class="mb-3">
                         <label for="validationCustom02" class="form-label">Password</label>
                         <input type="password" v-model.trim="password" class="form-control bg-input text-white" id="validationCustom02" required>
-                        <div id="invalid-feedback" class="form-text text-end d-none">¿Olvidó la contraseña?</div>
+                        <!-- <div class="invalid-feedback form-text text-end">Olvidó la contraseña?</div> -->
                     </div>
                     <button type="submit" class="btn btn-pink w-100 fw-bold">Acceder</button>
                 </form>

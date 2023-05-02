@@ -4,7 +4,7 @@ import { useUserStore } from "./stores/user";
 
 const userStore = useUserStore();
 
-console.log(userStore.userData);
+// console.log(userStore.userData);
 </script>
 
 <template>
@@ -12,7 +12,7 @@ console.log(userStore.userData);
     <!-- Header -->
     <div class="position-absolute">
       <div class="row pt-3 container-pf ms-5">
-        <div class="col-6 col-sm-3 head d-flex justify-content-around d-none d-md-flex" :class="userStore ? '' : 'bg-black'">
+        <div class="col-6 col-sm-3 head d-flex justify-content-around d-none d-md-flex" :class="userStore.userData ? '' : 'bg-black'">
           <img src="/imgs/logo.png" class="img-fluid logo_w me-3" alt="logo">
           <h2 class="title"><span class="text-white">anime</span>yabu.</h2>
         </div>

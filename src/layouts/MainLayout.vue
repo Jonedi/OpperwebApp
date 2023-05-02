@@ -1,5 +1,7 @@
 <script setup>
-import { useUserStore } from "../stores/user";
+import { useUserStore } from '../stores/user'
+
+const userStore = useUserStore();
 </script>
 
 <template>
@@ -15,7 +17,7 @@ import { useUserStore } from "../stores/user";
         </li>
       </ul>
       <h4 class="text-white mt-3">
-        <button class="btn btn-link text-white text-decoration-none" @click="useUserStore.logoutUser">Cerrar sesión</button>
+        <button class="btn btn-link text-white text-decoration-none" @click="userStore.logoutUser()">Cerrar sesión</button>
       </h4>
     </div>
   </div>
